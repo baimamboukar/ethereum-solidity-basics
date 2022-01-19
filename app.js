@@ -46,3 +46,16 @@ var provider = new ethers.providers.Web3Provider(
       signer
     );
   });
+
+
+  async function getMood() {
+    getMoodPromise = MoodContract.getMood();
+    var Mood = await getMoodPromise;
+    console.log(Mood);
+  }
+  
+  async function setMood() {
+    let mood = document.getElementById("mood").value;
+    setMoodPromise = MoodContract.setMood(mood);
+    await setMoodPromise;
+  }
