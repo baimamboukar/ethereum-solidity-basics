@@ -59,3 +59,6 @@ var provider = new ethers.providers.Web3Provider(
     setMoodPromise = MoodContract.setMood(mood);
     await setMoodPromise;
   }
+
+  document.getElementById("getMood").addEventListener("click", getMood);
+    document.getElementById("setMood").addEventListener("click", setMood);
